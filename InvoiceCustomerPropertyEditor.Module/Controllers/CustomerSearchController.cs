@@ -34,18 +34,6 @@ namespace InvoiceCustomerPropertyEditor.Module.Controllers
 
         }
 
-
-
-        protected override void OnActivated()
-        {
-            base.OnActivated();
-
-            var customer = ((ICustomerSearch)View.CurrentObject).Customer;
-
-        }
-
-
-
         private void WybierzNajemceAction_Execute(object sender, PopupWindowShowActionExecuteEventArgs e)
         {
             if (e.PopupWindowViewSelectedObjects.Count == 0)
@@ -62,14 +50,12 @@ namespace InvoiceCustomerPropertyEditor.Module.Controllers
 
             var parent = (ICustomerSearch)View.CurrentObject;
             Customer oldCustomer = parent?.Customer;
-
             parent.Customer = Customer;
+
             if (oldCustomer != null && oldCustomer.Session.IsNewObject(oldCustomer))
             {
                 oldCustomer.Delete();
             }
-
-
 
             View.Refresh();
             ObjectSpace.SetModified(parent);
