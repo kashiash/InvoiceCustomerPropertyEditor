@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="InvoiceCustomerPropertyEditor">
+  <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
+  </BOModel>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="21.1.4.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="21.1.4.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="21.1.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <DetailView Id="Invoice_DetailView">
+      <Items>
+        <ActionContainerViewItem Id="@3804e67b-c408-40a7-9b38-8ce1c7ffe223" ActionContainer="WpisywanieNajemcyCategory" Caption="Select customer" IsNewNode="True" />
+      </Items>
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Invoice" RelativeSize="11.162483487450462">
+              <LayoutGroup Id="Invoice_col1" RelativeSize="49.88142292490119">
+                <LayoutItem Id="InvoiceNumber" RelativeSize="36.666666666666664" />
+                <LayoutItem Id="Notes" RelativeSize="26.666666666666668" />
+                <LayoutItem Id="InvoiceDate" RelativeSize="36.666666666666664" />
+              </LayoutGroup>
+              <LayoutGroup Id="Invoice_col2" Caption="Invoice_col2" RelativeSize="50.11857707509881">
+                <LayoutItem Id="PaymentDate" RelativeSize="100" />
+                <LayoutItem Id="Customer" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="88.83751651254954" Caption="Oid">
+              <LayoutItem Id="@3804e67b-c408-40a7-9b38-8ce1c7ffe223" ViewItem="@3804e67b-c408-40a7-9b38-8ce1c7ffe223" Index="0" RelativeSize="3.4944237918215615" IsNewNode="True" />
+              <LayoutItem Id="Customer" ViewItem="Customer" Index="1" RelativeSize="96.50557620817844" IsNewNode="True" />
+              <LayoutItem Id="Oid" Index="1" RelativeSize="96.95167286245353" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
